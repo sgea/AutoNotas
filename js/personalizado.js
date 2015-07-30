@@ -18,8 +18,10 @@ function inserirNota()
 
 }
 
-function removerNota()
+function removerNota( id )
 {
+
+	var id = getElementById( id );
 
 }
 
@@ -27,8 +29,18 @@ function removerNota()
 function criarNovoNode()
 {
 
-	var node = document.createElement("div");
-	return node;
+	var nota = document.createElement("div");
+
+	var fechar = document.createElement("span");
+	fechar.className = "fechar";
+
+	nota.appendChild( fechar );
+
+	nota.id = "nota" + id;
+	fechar.id = "span" + id;
+	id++;
+
+	return nota;
 
 }
 
@@ -40,6 +52,11 @@ window.onload
 	function adicionar()
 	{
 		inserirNota();
+	}
+
+	function remover()
+	{
+		removerNota();
 	}
 
 }

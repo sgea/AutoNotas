@@ -214,9 +214,34 @@ header
 	padding: 20px 0;
 }
 
-.nota
+section#conteudo
+{
+  margin: 20px 10%;
+  width: 90%;
+}
+
+div.nota
 {
 	height: 200px;
 	width: 200px;
+  position: relative;
+  display: inline-block;
 	background-color: #00ffaa;
+  margin: 10px;
+}
+
+span.fechar
+{
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("../img/close.png");
+  background-size:  100% 100%;
+}
+
+span.fechar:hover
+{
+  background-color: black;
 }
