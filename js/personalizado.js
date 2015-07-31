@@ -18,10 +18,10 @@ function inserirNota()
 
 }
 
-function removerNota( id )
+function removerNota()
 {
 
-	var id = getElementById( id );
+	var id = getElementById( this.id );
 
 }
 
@@ -34,7 +34,11 @@ function criarNovoNode()
 	var fechar = document.createElement("span");
 	fechar.className = "fechar";
 
+	var textarea = document.createElement("textarea");
+	textarea.className = "textarea"
+
 	nota.appendChild( fechar );
+	nota.appendChild( textarea );
 
 	nota.id = "nota" + id;
 	fechar.id = "span" + id;
@@ -44,19 +48,21 @@ function criarNovoNode()
 
 }
 
-/* EVENTOS JAVASCRIPT */
-
+/* AO CARREGAR A PÁGINA */
 window.onload
 {
+
+	var spans = document.querySelectorAll("span");
 
 	function adicionar()
 	{
 		inserirNota();
+		
 	}
 
 	function remover()
 	{
-		removerNota();
+		alert("Remover clicado");
 	}
 
 }

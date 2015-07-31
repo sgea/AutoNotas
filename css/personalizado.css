@@ -222,18 +222,25 @@ section#conteudo
 
 div.nota
 {
+  margin: 10px;
 	height: 200px;
 	width: 200px;
   position: relative;
   display: inline-block;
-	background-color: #00ffaa;
-  margin: 10px;
+	background-color: #FFFF5E;
+  box-shadow: 1px 1px 5px #000;
+}
+
+div.nota:hover
+{
+  cursor: text;
+  z-index: 100;
 }
 
 span.fechar
 {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   position: absolute;
   top: 0;
   right: 0;
@@ -243,5 +250,14 @@ span.fechar
 
 span.fechar:hover
 {
-  background-color: black;
+  cursor: pointer;
+}
+
+.textarea
+{
+  position: absolute;
+  width: 98%;
+  height: 98%;
+  background-color: rgba(255,255,255,0.0);
+  border: none;
 }
