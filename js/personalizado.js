@@ -5,7 +5,54 @@
 
 /* JAVASCRIPT PARA CRIAÇÃO DA NOTA AUTODESIVA */
 
-var id = 0;
+/* AO CARREGAR A PÁGINA */
+window.onload
+{
+	var cont = -1;
+}
+
+function adicionar()
+{
+	cont++;
+	inserirNota();
+}
+
+function remover()
+{
+
+	var current = document.getElementById("conteudo");
+	elemento = document.getElementById("nota" + cont);
+	current.removeChild( elemento );
+	cont--;
+
+}
+
+function salvar()
+{
+	alert("Salvo!");
+	//TODO
+}
+
+function criarNovoNode()
+{
+
+	var nota = document.createElement("div");
+
+	var fechar = document.createElement("span");
+	fechar.className = "fechar";
+
+	var textarea = document.createElement("textarea");
+	textarea.className = "textarea"
+
+	nota.appendChild( fechar );
+	nota.appendChild( textarea );
+
+	nota.id = "nota" + cont;
+	fechar.id = "span" + cont;
+
+	return nota;
+
+}
 
 function inserirNota()
 {
@@ -22,47 +69,5 @@ function removerNota()
 {
 
 	var id = getElementById( this.id );
-
-}
-
-
-function criarNovoNode()
-{
-
-	var nota = document.createElement("div");
-
-	var fechar = document.createElement("span");
-	fechar.className = "fechar";
-
-	var textarea = document.createElement("textarea");
-	textarea.className = "textarea"
-
-	nota.appendChild( fechar );
-	nota.appendChild( textarea );
-
-	nota.id = "nota" + id;
-	fechar.id = "span" + id;
-	id++;
-
-	return nota;
-
-}
-
-/* AO CARREGAR A PÁGINA */
-window.onload
-{
-
-	var spans = document.querySelectorAll("span");
-
-	function adicionar()
-	{
-		inserirNota();
-		
-	}
-
-	function remover()
-	{
-		alert("Remover clicado");
-	}
 
 }
